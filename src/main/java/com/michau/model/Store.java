@@ -3,7 +3,7 @@ package com.michau.model;
 import com.michau.model.clients.Client;
 import com.michau.model.clients.StoreEmployee;
 import com.michau.model.goods.Goods;
-import com.michau.model.saleSystem.Sale;
+import com.michau.model.sale.Sale;
 
 import javax.persistence.*;
 import java.util.List;

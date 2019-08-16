@@ -1,8 +1,4 @@
-package com.michau.model.saleSystem;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+package com.michau.model.sale;
 
 public class TaxRate {
 

@@ -1,6 +1,5 @@
-package com.michau.model.saleSystem;
+package com.michau.model.sale;
 
-import javax.persistence.*;
 import java.util.Date;
 
 

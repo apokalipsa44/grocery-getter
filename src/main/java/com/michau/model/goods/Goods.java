@@ -1,8 +1,7 @@
 package com.michau.model.goods;
 
 import com.michau.model.Store;
-import com.michau.model.saleSystem.Sale;
-import com.michau.model.saleSystem.TaxRate;
+import com.michau.model.sale.Sale;
 
 import javax.persistence.*;
 

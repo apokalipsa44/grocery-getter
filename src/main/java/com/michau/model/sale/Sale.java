@@ -1,4 +1,4 @@
-package com.michau.model.saleSystem;
+package com.michau.model.sale;
 
 import com.michau.model.Store;
 import com.michau.model.clients.Client;

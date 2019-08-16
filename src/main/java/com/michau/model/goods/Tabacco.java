@@ -1,8 +1,5 @@
 package com.michau.model.goods;
 
-import com.michau.model.goods.Goods;
-import com.michau.model.saleSystem.TaxRate;
-
 import javax.persistence.Entity;
 
 @Entity

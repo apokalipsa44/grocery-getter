@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class StoreEmployee extends Client {
 
-    private final Double EMPLOYEE_DISCOUNT=0.5;
+    private final Double EMPLOYEE_DISCOUNT=0.05;
 
     @ManyToOne
     private Store store;
