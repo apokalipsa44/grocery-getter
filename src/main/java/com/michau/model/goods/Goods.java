@@ -1,11 +1,10 @@
 package com.michau.model.goods;
 
+import com.michau.model.Store;
+import com.michau.model.saleSystem.Sale;
 import com.michau.model.saleSystem.TaxRate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Goods {
@@ -18,14 +17,20 @@ public class Goods {
 
     private Double price;
 
-    private TaxRate taxRate;
+    private Double taxRate;
 
     private Integer stock;
+
+    @ManyToOne
+    private Store store;
+
+    @ManyToOne
+    private Sale sale;
 
     public Goods() {
     }
 
-    public Goods(String name, Double price, TaxRate taxRate, Integer stock) {
+    public Goods(String name, Double price, Double taxRate, Integer stock) {
         this.name = name;
         this.price = price;
         this.taxRate = taxRate;
@@ -52,11 +57,11 @@ public class Goods {
         this.price = price;
     }
 
-    public TaxRate getTaxRate() {
+    public Double getTaxRate() {
         return taxRate;
     }
 
-    public void setTaxRate(TaxRate taxRate) {
+    public void setTaxRate(Double taxRate) {
         this.taxRate = taxRate;
     }
 
@@ -66,5 +71,21 @@ public class Goods {
 
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public Store getStore() {
+        return store;
+    }
+
+    public void setStore(Store store) {
+        this.store = store;
+    }
+
+    public Sale getSale() {
+        return sale;
+    }
+
+    public void setSale(Sale sale) {
+        this.sale = sale;
     }
 }

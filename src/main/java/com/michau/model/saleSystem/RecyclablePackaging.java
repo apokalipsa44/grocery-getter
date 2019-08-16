@@ -1,10 +1,18 @@
 package com.michau.model.saleSystem;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class RecyclablePackaging {
-    private double recycleFee;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Double recycleFee;
 
     public RecyclablePackaging() {
     }

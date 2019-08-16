@@ -4,25 +4,30 @@ import com.michau.model.saleSystem.ExpDate;
 import com.michau.model.saleSystem.TaxRate;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.util.Date;
 
 @Entity
 public class FrozenFood extends Goods {
 
-    private ExpDate expDate;
+
+    @Temporal(TemporalType.DATE)
+    private Date expDate;
 
     public FrozenFood() {
     }
 
-    public FrozenFood(String name, Double price, TaxRate taxRate, Integer stock, ExpDate expDate) {
+    public FrozenFood(String name, Double price, Double taxRate, Integer stock, Date expDate) {
         super(name, price, taxRate, stock);
         this.expDate = expDate;
     }
 
-    public ExpDate getExpDate() {
+    public Date getExpDate() {
         return expDate;
     }
 
-    public void setExpDate(ExpDate expDate) {
+    public void setExpDate(Date expDate) {
         this.expDate = expDate;
     }
 }

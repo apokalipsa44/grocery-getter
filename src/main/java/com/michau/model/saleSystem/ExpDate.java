@@ -1,11 +1,16 @@
 package com.michau.model.saleSystem;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+
 public class ExpDate {
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+//    @Temporal(TemporalType.DATE)
     private Date expDate;
 
     public ExpDate() {

@@ -1,12 +1,10 @@
 package com.michau.model.saleSystem;
 
+import com.michau.model.Store;
 import com.michau.model.clients.Client;
 import com.michau.model.goods.Goods;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -18,11 +16,16 @@ public class Sale {
 
     private Date dateOfSale;
 
+    @OneToOne
     private Client client;
 
+    @OneToMany
     private List<Goods> goods;
 
     private Double totalPrice;
+
+    @ManyToOne
+    private Store store;
 
     public Sale() {
     }
@@ -68,5 +71,13 @@ public class Sale {
 
     public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public Store getStore() {
+        return store;
+    }
+
+    public void setStore(Store store) {
+        this.store = store;
     }
 }

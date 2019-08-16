@@ -1,9 +1,9 @@
 package com.michau.model.clients;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.michau.model.Store;
+import com.michau.model.saleSystem.Sale;
+
+import javax.persistence.*;
 
 @Entity
 public class Client {
@@ -15,6 +15,12 @@ public class Client {
     private String name;
 
     private String lastName;
+
+    @ManyToOne
+    private Store store;
+
+    @OneToOne
+    private Sale sale;
 
     public Client() {
     }
@@ -42,5 +48,21 @@ public class Client {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Store getStore() {
+        return store;
+    }
+
+    public void setStore(Store store) {
+        this.store = store;
+    }
+
+    public Sale getSale() {
+        return sale;
+    }
+
+    public void setSale(Sale sale) {
+        this.sale = sale;
     }
 }

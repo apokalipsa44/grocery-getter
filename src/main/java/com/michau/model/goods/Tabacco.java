@@ -11,7 +11,7 @@ public class Tabacco extends Goods {
     public Tabacco() {
     }
 
-    public Tabacco(String name, Double price, TaxRate taxRate, Integer stock) {
+    public Tabacco(String name, Double price, Double taxRate, Integer stock) {
         super(name, price, taxRate, stock);
     }
 }
