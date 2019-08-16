@@ -1,30 +1,25 @@
 package com.michau.model.goods;
 
-import com.michau.model.saleSystem.RecyclablePackaging;
-import com.michau.model.saleSystem.TaxRate;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 public class Alcohol extends Goods {
 
-//    @Column(precision = 5, scale = 2, columnDefinition = "DECIMAL(7,3)")
-//    private RecyclablePackaging recyclablePackaging;
+    private Double recycleFee;
 
     public Alcohol() {
     }
 
-    public Alcohol(String name, Double price, Double taxRate, Integer stock) {
+    public Alcohol(String name, Double price, Double taxRate, Integer stock, Double recycleFee) {
         super(name, price, taxRate, stock);
-
+        this.recycleFee = recycleFee;
     }
 
-//    public RecyclablePackaging getRecyclablePackaging() {
-//        return recyclablePackaging;
-//    }
-//
-//    public void setRecyclablePackaging(RecyclablePackaging recyclablePackaging) {
-//        this.recyclablePackaging = recyclablePackaging;
-//    }
+    public Double getRecycleFee() {
+        return recycleFee;
+    }
+
+    public void setRecycleFee(Double recycleFee) {
+        this.recycleFee = recycleFee;
+    }
 }
