@@ -27,6 +27,14 @@ public class SaleService {
     public Iterable<Sale> findByDateOfSale(Date dateOfSale){
         return saleRepo.findByDateOfSale(dateOfSale);
     }
+
+    public Iterable<Sale> findByClientName(String name){
+        return saleRepo.findByClientName(name);
+    }
+
+    public Iterable<Sale> findByClientLastName(String lastName){
+        return saleRepo.findByClientLastName(lastName);
+    }
 }
 //    public Optional<VideoCassete> findById(Long id) {
 //        return videoRepo.findById(id);
