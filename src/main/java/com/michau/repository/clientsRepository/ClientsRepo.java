@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ClientsRepo extends CrudRepository<Client, Long> {
 
-    public Optional<Client> findByName(String name);
+    public Iterable<Client> findByName(String name);
 
-    public Optional<Client> findByLastName(String lastName);
+    public Iterable<Client> findByLastName(String lastName);
 }

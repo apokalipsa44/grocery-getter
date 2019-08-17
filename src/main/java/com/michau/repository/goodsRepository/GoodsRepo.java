@@ -9,7 +9,7 @@ public interface GoodsRepo extends CrudRepository<Goods, Long> {
 
     public Optional<Goods> findByName(String name);
 
-    public Optional<Goods> findByPrice(Double price);
+    public Iterable<Goods> findByPrice(Double price);
 
-    public Optional<Goods> findByStock(int stockNumber);
+    public Iterable<Goods> findByStock(int stockNumber);
 }

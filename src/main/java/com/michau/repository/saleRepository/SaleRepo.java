@@ -9,11 +9,11 @@ import java.util.Optional;
 
 public interface SaleRepo extends CrudRepository<Sale, Long> {
 
-    public List<Optional<Sale>> findByDateOfSale(Date dateOfSale);
+    public Iterable<Sale> findByDateOfSale(Date dateOfSale);
 
-    public List<Optional<Sale>> findByClientName(String name);
+    public Iterable<Sale> findByClientName(String name);
 
-    public List<Optional<Sale>> findByClientLastName(String lastName);
+    public Iterable<Sale> findByClientLastName(String lastName);
 
     //todo findByPriceRange
 
