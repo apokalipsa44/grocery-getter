@@ -244,7 +244,6 @@
                     <plugin>
                         <groupId>com.lazerycode.selenium</groupId>
                         <artifactId>driver-binary-downloader-maven-plugin</artifactId>
-                        <version>1.0.17</version>
                         <configuration>
                             <onlyGetDriversForHostOperatingSystem>true
                             </onlyGetDriversForHostOperatingSystem>
