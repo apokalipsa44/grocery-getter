@@ -1,9 +1,9 @@
 package com.michau.model.users;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.michau.model.clients.Address;
+
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class User {
@@ -19,6 +19,8 @@ public class User {
     private String email;
 
     private String role;
+
+    private LocalDate lastLogged;
 
     public User() {
     }
@@ -69,4 +71,14 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public LocalDate getLastLogged() {
+        return lastLogged;
+    }
+
+    public void setLastLogged() {
+        lastLogged = LocalDate.now();
+    }
+
+
 }

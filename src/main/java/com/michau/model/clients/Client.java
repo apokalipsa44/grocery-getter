@@ -25,6 +25,9 @@ public class Client {
 
     private ClientType clientType;
 
+    @OneToOne
+    private Address address;
+
     public Client() {
     }
 
