@@ -16,13 +16,16 @@ class AdminPanel extends PolymerElement {
 <h1 style="align-self:center">admin aanel</h1>
 <vaadin-tabs>
  <vaadin-tab>
-  manage users
+   manage users 
  </vaadin-tab>
  <vaadin-tab>
-  manage clients
+   manage clients 
  </vaadin-tab>
  <vaadin-tab>
-  sales list
+   sales list 
+ </vaadin-tab>
+ <vaadin-tab>
+  store administration
  </vaadin-tab>
 </vaadin-tabs>
 `;
