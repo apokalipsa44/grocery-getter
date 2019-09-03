@@ -122,9 +122,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.github.appreciated</groupId>
-            <artifactId>app-layout-addon</artifactId>
-            <version>4.0.0.beta1</version>
+            <groupId>de.kaesdingeling</groupId>
+            <artifactId>hybridmenu</artifactId>
+            <version>3.0.17.vaadin10</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -137,7 +137,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
         <plugins>
@@ -284,4 +283,5 @@
         </profile>
 
     </profiles>
+
 </project>
