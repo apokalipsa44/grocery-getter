@@ -28,6 +28,8 @@ public class Client {
     @OneToOne
     private Address address;
 
+    private String phone;
+
     public Client() {
     }
 
