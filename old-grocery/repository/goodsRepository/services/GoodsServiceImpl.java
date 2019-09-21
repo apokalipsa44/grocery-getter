@@ -2,9 +2,10 @@ package com.michau.repository.goodsRepository.services;
 
 import com.michau.model.goods.Goods;
 import com.michau.repository.goodsRepository.GoodsRepo;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+@Service
 public class GoodsServiceImpl {
 
     private GoodsRepo goodsRepo;
