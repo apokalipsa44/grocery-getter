@@ -1,13 +1,13 @@
-package com.machau.grocerygetteer;
+package com.machau.grocerygetter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GroceryGetteerApplication {
+public class GroceryGetterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GroceryGetteerApplication.class, args);
+		SpringApplication.run(GroceryGetterApplication.class, args);
 	}
 
 }

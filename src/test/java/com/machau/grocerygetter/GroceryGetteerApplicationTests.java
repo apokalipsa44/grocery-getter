@@ -1,4 +1,4 @@
-package com.machau.grocerygetteer;
+package com.machau.grocerygetter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
