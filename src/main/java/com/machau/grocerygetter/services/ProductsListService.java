@@ -26,20 +26,19 @@ public class ProductsListService {
 
 
     public List<Products> getProductsList() {
-//        productsList.clear();
-        productsListInit();
+        productsList=productsListInit();
         Iterable<Products>productsIterable=productsRepository.findAll();
         productsIterable.forEach(productsList::add);
         return  productsList ;
     }
 
     private List<Products> productsListInit() {
+        productsList.clear();
         productsList.add(new Products("Marchewka", 3.75, ProductsType.VEGETABLES, LocalDate.now().plusDays(14L)));
         productsList.add(new Products("Pepsi", 1.42, ProductsType.DRINKS, LocalDate.now().plusDays(99L)));
         productsList.add(new Products("Chlebek", 0.99, ProductsType.BREAD, LocalDate.now().plusDays(7L)));
         productsList.add(new Products("Chałka", 2.55, ProductsType.BREAD, LocalDate.now().plusDays(14L)));
         productsList.add(new Products("Apple", 3.75, ProductsType.FRUITS, LocalDate.now().plusDays(10L)));
-        productsList.forEach(e->productsRepository.save(e));
         return productsList;
 
     }
