@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Adders {
+public class Address {
     @Id
     @GeneratedValue
     private Long id;
@@ -29,7 +29,7 @@ public class Adders {
     @OneToOne
     private Clients client;
 
-    public Adders(String street, String houseNumber, String city, String zipCode) {
+    public Address(String street, String houseNumber, String city, String zipCode) {
         this.street = street;
         this.houseNumber = houseNumber;
         this.city = city;

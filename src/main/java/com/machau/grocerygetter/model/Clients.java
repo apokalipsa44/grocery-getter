@@ -20,17 +20,17 @@ public class Clients {
     private String lastName;
 
     @OneToOne
-    private Adders adders;
+    private Address address;
 
     private String phone;
 
     @OneToMany
     private List<Sales> salesList;
 
-    public Clients(String name, String lastName, Adders adders, String phone) {
+    public Clients(String name, String lastName, Address address, String phone) {
         this.name = name;
         this.lastName = lastName;
-        this.adders = adders;
+        this.address = address;
         this.phone = phone;
     }
 }
