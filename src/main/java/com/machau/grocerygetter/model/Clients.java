@@ -3,6 +3,8 @@ package com.machau.grocerygetter.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -20,12 +22,13 @@ public class Clients {
     private String lastName;
 
     @OneToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private Address address;
 
     private String phone;
 
-    @OneToMany
-    private List<Sales> salesList;
+//    @OneToMany
+//    private List<Sales> salesList;
 
     public Clients(String name, String lastName, Address address, String phone) {
         this.name = name;

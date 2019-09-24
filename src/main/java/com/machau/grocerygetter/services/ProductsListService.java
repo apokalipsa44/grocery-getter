@@ -15,20 +15,22 @@ public class ProductsListService {
 
     List<Products> productsList=new ArrayList<>();
 
-    ProductsRepository productsRepository;
+    private ProductsRepository productsRepository;
+
     @Autowired
     public ProductsListService(ProductsRepository productsRepository) {
         this.productsRepository = productsRepository;
     }
 
 
-    public ProductsListService() {
-    }
+
 
     public List<Products> getProductsList() {
-//        Iterable<Products>productsIterable=productsRepository.findAll();
-//        productsIterable.forEach(productsList::add);
-        return productsListInit();
+//        productsList.clear();
+        productsListInit();
+        Iterable<Products>productsIterable=productsRepository.findAll();
+        productsIterable.forEach(productsList::add);
+        return  productsList ;
     }
 
     private List<Products> productsListInit() {

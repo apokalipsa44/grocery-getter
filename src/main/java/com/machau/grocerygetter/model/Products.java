@@ -29,8 +29,8 @@ public class Products {
 
     private LocalDate expDate;// todo if expDate is near end price -50%
 
-    @ManyToMany
-    private List<Sales> sales;
+//    @ManyToMany
+//    private List<Sales> sales;
 
     public Products(String name, Double price , ProductsType productsType, LocalDate expDate) {
         this.name = name;

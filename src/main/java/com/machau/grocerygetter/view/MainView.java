@@ -1,6 +1,8 @@
 package com.machau.grocerygetter.view;
 
 import com.machau.grocerygetter.repository.ProductsRepository;
+import com.machau.grocerygetter.services.ClientsListService;
+import com.machau.grocerygetter.services.ProductsListService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -13,7 +15,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.StreamResource;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,9 +25,12 @@ public class MainView extends AppLayout {
 
     private Map<Tab, Component> tabComponentMap = new HashMap<>();
 
+    private ProductsListService productsListService;
+    private ClientsListService clientsListService;
 
-
-    public MainView() {
+    public MainView(ProductsListService productsListService, ClientsListService clientsListService) {
+        this.clientsListService=clientsListService;
+        this.productsListService = productsListService;
         setContent(new Label("ssij"));
 
         Image image = new Image("frontend/images/logo.png", "logo");
@@ -55,7 +60,7 @@ public class MainView extends AppLayout {
         final Span label = new Span("Clients");
         final Icon icon = VaadinIcon.USERS.create();
         final Tab tab = new Tab(new HorizontalLayout(icon, label));
-        tabComponentMap.put(tab, new ClientsView());
+        tabComponentMap.put(tab, new ClientsView(clientsListService));
         return tab;
     }
 
@@ -63,7 +68,7 @@ public class MainView extends AppLayout {
         final Span label = new Span("Products");
         final Icon icon = VaadinIcon.STORAGE.create();
         final Tab tab = new Tab(new HorizontalLayout(icon, label));
-        tabComponentMap.put(tab, new ProductsView());
+        tabComponentMap.put(tab, new ProductsView(productsListService));
         return tab;
     }
 }

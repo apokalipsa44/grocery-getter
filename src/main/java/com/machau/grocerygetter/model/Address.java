@@ -3,6 +3,9 @@ package com.machau.grocerygetter.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -27,6 +30,7 @@ public class Address {
     private String zipCode;
 
     @OneToOne
+    @Cascade(CascadeType.ALL)
     private Clients client;
 
     public Address(String street, String houseNumber, String city, String zipCode) {
