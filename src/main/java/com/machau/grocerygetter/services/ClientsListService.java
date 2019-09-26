@@ -21,14 +21,14 @@ public class ClientsListService {
     }
 
     public List<Clients> getClientsList(){
-        clientsList.clear();
-        clientsListInit();
+        clientsList=clientsListInit();
         Iterable<Clients>  clientsIterable=clientsRepository.findAll();
         clientsIterable.forEach(clientsList::add);
         return clientsList;
     }
 
     private List<Clients> clientsListInit() {
+        clientsList.clear();
         clientsList.add(new Clients("John", "Rambo",
                 new Address("Strasse", "27b", "Breslau", "54-548"
         ),"664884824" ));
@@ -44,7 +44,6 @@ public class ClientsListService {
         clientsList.add(new Clients("Miś", "Uszatek",
                 new Address("Długa", "651651m/1", "Breslau", "54-333"
                 ),"648254542" ));
-        clientsRepository.saveAll(clientsList);
 
         return clientsList;
     }
