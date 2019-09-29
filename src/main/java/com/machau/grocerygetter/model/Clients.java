@@ -36,4 +36,8 @@ public class Clients {
         this.address = address;
         this.phone = phone;
     }
+
+    public String getFullName(){
+        return this.name+" "+this.lastName;
+    }
 }

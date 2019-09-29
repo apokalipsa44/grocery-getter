@@ -25,4 +25,5 @@ public class Sales {
     private List<Products>productsList;
 
     private Double totalPrice;
+
 }

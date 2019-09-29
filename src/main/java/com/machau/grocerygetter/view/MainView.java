@@ -1,8 +1,10 @@
 package com.machau.grocerygetter.view;
 
+import com.machau.grocerygetter.repository.ClientsRepository;
 import com.machau.grocerygetter.repository.ProductsRepository;
 import com.machau.grocerygetter.services.ClientsListService;
 import com.machau.grocerygetter.services.ProductsListService;
+import com.machau.grocerygetter.services.SalesListService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -27,10 +29,16 @@ public class MainView extends AppLayout {
 
     private ProductsListService productsListService;
     private ClientsListService clientsListService;
+    private SalesListService salesListService;
 
-    public MainView(ProductsListService productsListService, ClientsListService clientsListService) {
-        this.clientsListService=clientsListService;
+    public MainView(ProductsListService productsListService,
+                    ClientsListService clientsListService,
+                    SalesListService salesListService) {
+        this.clientsListService = clientsListService;
         this.productsListService = productsListService;
+        this.salesListService = salesListService;
+
+
         setContent(new Label("ssij"));
 
         Image image = new Image("frontend/images/logo.png", "logo");
@@ -52,7 +60,7 @@ public class MainView extends AppLayout {
         final Span label = new Span("Sales");
         final Icon icon = VaadinIcon.FILE_TABLE.create();
         final Tab tab = new Tab(new HorizontalLayout(icon, label));
-        tabComponentMap.put(tab, new SalesView());
+        tabComponentMap.put(tab, new SalesView(salesListService, clientsListService, productsListService));
         return tab;
     }
 
