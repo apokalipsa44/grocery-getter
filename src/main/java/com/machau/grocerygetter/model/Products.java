@@ -25,6 +25,7 @@ public class Products {
 
     private Integer stock;
 
+    @Enumerated(EnumType.ORDINAL)
     private ProductsType productsType;
 
     private LocalDate expDate;// todo if expDate is near end price -50%

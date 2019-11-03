@@ -3,6 +3,7 @@ package com.michau.repository.goodsRepository.services;
 import com.michau.model.goods.MilkProducts;
 import com.michau.repository.goodsRepository.GoodsRepo;
 import com.michau.repository.goodsRepository.MilkProductsRepo;
+import com.michau.repository.goodsRepository.services.GoodsServiceImpl;
 
 import java.util.Date;
 

@@ -1,7 +1,5 @@
 package com.michau.model.users;
 
-import com.michau.model.clients.Address;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 

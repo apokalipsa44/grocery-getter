@@ -6,7 +6,7 @@ import com.michau.repository.goodsRepository.GoodsRepo;
 
 import java.util.Date;
 
-public class FrozenFoodServiceImpl extends  GoodsServiceImpl {
+public class FrozenFoodServiceImpl extends GoodsServiceImpl {
 
     private FrozenFoodRepo frozenFoodRepo;
 
